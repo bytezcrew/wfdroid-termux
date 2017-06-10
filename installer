@@ -1,0 +1,33 @@
+#!/data/data/com.termux/files/usr/bin/bash
+echo "PREPARING FOR INSTALL WFDROID...";
+sleep 5s
+apt update -y
+apt install curl -y
+apt upgrade curl -y
+apt install wget -y
+apt upgrade wget -y
+### MAKE A FILE MASTER ###
+mkdir /data/data/com.termux/files/usr/share/wfdroid/
+wget https://raw.githubusercontent.com/bytezcrew/wfdroid-termux/master/master
+mv master /data/data/com.termux/files/usr/share/wfdroid/
+### MAKE A BINARY ###
+touch /data/data/com.termux/files/usr/bin/wfdroid
+echo "#!/data/data/com.termux/files/usr/bin/bash" >> /data/data/com.termux/files/usr/bin/wfdroid
+echo "/data/data/com.termux/files/usr/share/wfdroid/master" >> /data/data/com.termux/files/usr/bin/wfdroid
+chmod 775 /data/data/com.termux/files/usr/bin/wfdroid
+### MAKE A WEB BRUTE FORCE TOOL ###
+wget https://raw.githubusercontent.com/bytezcrew/wfdroid-termux/master/webbrute
+mv webbrute /data/data/com.termux/files/usr/share/wfdroid/
+chmod 775 /data/data/com.termux/files/usr/share/wfdroid/webbrute
+### MAKE A WEB LOGIN FINDER ###
+wget https://raw.githubusercontent.com/bytezcrew/wfdroid-termux/master/loginfinder
+mv loginfinder /data/data/com.termux/files/usr/share/wfdroid/
+chmod 775 /data/data/com.termux/files/usr/share/wfdroid/loginfinder
+### MAKE A WEB SOURCE-CODE VIEWER ###
+wget https://raw.githubusercontent.com/bytezcrew/wfdroid-termux/master/sourcecode
+mv sourcecode /data/data/com.termux/files/usr/share/wfdroid/
+chmod 775 /data/data/com.termux/files/usr/share/wfdroid/sourcecode
+### MAKE A WFDROID UPDATER ###
+wget https://raw.githubusercontent.com/bytezcrew/wfdroid-termux/master/update
+mv update /data/data/com.termux/files/usr/share/wfdroid/
+chmod 775 /data/data/com.termux/files/usr/share/wfdroid/update
