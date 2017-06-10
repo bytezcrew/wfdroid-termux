@@ -1,0 +1,20 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+echo " _____                        __  __";
+echo "|_   _|__ _ __ _ __ ___  _   _\ \/ /";
+echo "  | |/ _ \ '__| '_ ` _ \| | | |\  / ";
+echo "  | |  __/ |  | | | | | | |_| |/  \ ";
+echo "  |_|\___|_|  |_| |_| |_|\__,_/_/\_\";
+echo "WhackWYP - Web-Hack With Your Pocket";
+echo "                    WhackWYP - V 1.0";
+echo "";
+echo "HackWYP Pack List for Install.";
+echo "";
+echo "### Web-Hacking Pack ###";
+echo "[1]. Web Brute-Force Tool";
+echo "[2]. SQLMAP";
+echo "[3]. Admin Dir-Finder";
+echo "[4]. Wordlist Updater";
+echo "[00]. Update WhackWYP";
+echo "";
+echo "WHWYP.@=> ";read menu
