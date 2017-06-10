@@ -31,3 +31,11 @@ chmod 775 /data/data/com.termux/files/usr/share/wfdroid/sourcecode
 wget https://raw.githubusercontent.com/bytezcrew/wfdroid-termux/master/update
 mv update /data/data/com.termux/files/usr/share/wfdroid/
 chmod 775 /data/data/com.termux/files/usr/share/wfdroid/update
+### ADD WORDLIST ###
+mkdir /data/data/com.termux/files/usr/share/wfdroid/list
+wget https://raw.githubusercontent.com/bytezcrew/wfdroid-termux/master/list/wordlist.txt
+mv wordlist.txt /data/data/com.termux/files/usr/share/wfdroid/list/
+chmod 755 /data/data/com.termux/files/usr/share/wfdroid/list/wordlist.txt
+wget https://raw.githubusercontent.com/bytezcrew/wfdroid-termux/master/list/dirlist.txt
+mv dirlist.txt /data/data/com.termux/files/usr/share/wfdroid/list/
+chmod 755 /data/data/com.termux/files/usr/share/wfdroid/list/dirlist.txt
