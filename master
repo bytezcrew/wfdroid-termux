@@ -1,0 +1,62 @@
+#!/data/data/com.termux/files/usr/bin/bash
+clear
+echo "           __     _           _     _ ";
+echo "__      __/ _| __| |_ __ ___ (_) __| |";
+echo "\ \ /\ / / |_ / _  | '__/ _ \| |/ _  |";
+echo " \ V  V /|  _| (_| | | | (_) | | (_| |";
+echo "  \_/\_/ |_|  \__,_|_|  \___/|_|\__,_|";
+echo "      Web-Forcer for Android on TermuX";
+echo "                         wfdroid V 1.0";
+echo "~~~~~~~~~~~~~~ BytezCrew ~~~~~~~~~~~~~";
+echo "";
+echo "1. Web Source-Code Looker";
+echo "2. Web Brute Force";
+echo "3. Web Login Finder";
+echo "4. Wordlist Updater";
+echo "00. Upgrade";
+echo "88. Credits";
+echo -ne "\n@=> ";read menu
+
+  if [ $menu == '88' ]
+  then
+     clear
+     echo "           __     _           _     _ ";
+     echo "__      __/ _| __| |_ __ ___ (_) __| |";
+     echo "\ \ /\ / / |_ / _  | '__/ _ \| |/ _  |";
+     echo " \ V  V /|  _| (_| | | | (_) | | (_| |";
+     echo "  \_/\_/ |_|  \__,_|_|  \___/|_|\__,_|";
+     echo "             by Schopath [ BytezCrew ]";
+     echo "";
+     echo "Enjoy forcing the Website with your android device, make it simple dude!";
+     echo "";
+     echo "Thanks to:";
+     echo "- TermuX";
+     echo "- Bahari Trouble Maker (Team)";
+     echo "- IndoXploit (Team)";
+     echo "- BerdendangC0de (Team)";
+     echo "- JLoyal (Team)";
+     echo "";
+  elif [ $menu == '1' ]
+  then
+     /data/data/com.termux/files/usr/share/wfdroid/sourcecode
+
+  elif [ $menu == '2' ]
+  then
+     /data/data/com.termux/files/usr/share/wfdroid/webbrute
+
+  elif [ $menu == '3' ]
+  then
+     /data/data/com.termux/files/usr/share/wfdroid/loginfinder
+
+  elif [ $menu == '4' ]
+  then
+     /data/data/com.termux/files/usr/share/wfdroid/wordlist
+
+  elif [ $menu == '00' ]
+  then
+     /data/data/com.termux/files/usr/share/wfdroid/update
+
+  else
+     echo "You must choose menu with a number."
+
+  fi

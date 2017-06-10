@@ -1,0 +1,51 @@
+#!/data/data/com.termux/files/usr/bin/bash
+clear
+echo " ____            _  Web-Login ";
+echo "| __ ) _   _ ___| |_ ___ _ __ ";
+echo "|  _ \| | | / __| __/ _ \ '__|";
+echo "| |_) | |_| \__ \ ||  __/ |   ";
+echo "|____/ \__,_|___/\__\___|_|   ";
+echo "------------- wfdroid tools --";
+echo -n "Enter URL : "; read url
+echo "";
+echo "Enter Wordlist File";
+echo -n "default [dirlist.txt] : "; read listname
+echo $listname total $(wc -l < $listname) Wordlist
+i=0
+for item in $(cat $listname);
+do
+    i=$[i+1]
+    testurl=$(curl -s -o /dev/null -w '%{http_code}' $url'/'$item)
+
+    if [[ $testurl == 200 ]]
+    then
+        echo '['$i'] '$url'/'$item' = '$testurl
+        echo $url'/'$item >> /data/data/com.termux/files/usr/share/wfdroid/done/FOUND_LOGIN.txt
+
+    elif [[ $testurl == 301 ]]
+    then
+        echo '['$i'] '$url'/'$item' = '$testurl
+        echo $url'/'$item >> /data/data/com.termux/files/usr/share/wfdroid/done/FOUND_LOGIN.txt
+
+    elif [[ $testurl == 302 ]]
+    then
+        echo '['$i'] '$url'/'$item' = '$testurl
+        echo $url'/'$item >> /data/data/com.termux/files/usr/share/wfdroid/done/FOUND_LOGIN.txt
+
+    elif [[ $testurl == 401 ]]
+    then
+        echo '['$i'] '$url'/'$item' = '$testurl
+        echo $url'/'$item >> /data/data/com.termux/files/usr/share/wfdroid/done/FOUND_LOGIN.txt
+
+    elif [[ $testurl == 403 ]]
+    then
+        echo '['$i'] '$url'/'$item' = '$testurl
+        echo $url'/'$item >> /data/data/com.termux/files/usr/share/wfdroid/done/FOUND_LOGIN.txt
+
+    else
+        echo '['$i'] CHECKING...'
+    fi
+done
+
+echo "If done check in : ";
+echo "/data/data/com.termux/files/usr/share/wfdroid/done/FOUND_LOGIN.txt";

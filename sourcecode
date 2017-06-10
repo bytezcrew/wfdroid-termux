@@ -1,0 +1,9 @@
+#!/data/data/com.termux/files/usr/bin/bash
+clear
+echo "[~] WEB SOURCE CODE VIEWER. [~]";
+echo "";
+echo -n "enter url/link : ";read url
+curl -i -L $url
+echo "";
+echo "DONE !!";
+echo "";

