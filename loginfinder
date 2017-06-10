@@ -10,9 +10,9 @@ echo -n "Enter URL : "; read url
 echo "";
 echo "Enter Wordlist File";
 echo -n "default [dirlist.txt] : "; read listname
-echo $listname total $(wc -l < $listname) Wordlist
+echo $listname total $(wc -l < /data/data/com.termux/files/usr/share/wfdroid/list/$listname) Wordlist
 i=0
-for item in $(cat $listname);
+for item in $(cat /data/data/com.termux/files/usr/share/wfdroid/list/$listname);
 do
     i=$[i+1]
     testurl=$(curl -s -o /dev/null -w '%{http_code}' $url'/'$item)
