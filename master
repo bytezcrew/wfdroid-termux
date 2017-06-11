@@ -9,10 +9,9 @@ echo "      Web-Forcer for Android on TermuX";
 echo "                         wfdroid V 1.0";
 echo "~~~~~~~~~~~~~~ BytezCrew ~~~~~~~~~~~~~";
 echo "";
-echo "1. Web Source-Code Looker";
+echo "1. Web Source-Code Viewer";
 echo "2. Web Brute Force";
 echo "3. Web Login Finder";
-echo "4. Wordlist Updater";
 echo "00. Upgrade";
 echo "88. Credits";
 echo -ne "\n@=> ";read menu
