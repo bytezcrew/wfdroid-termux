@@ -31,6 +31,8 @@ echo -ne "\n@=> ";read menu
      echo "";
      echo "Thanks to:";
      echo "- TermuX";
+     echo " Ccocot - Mr.DreamX196 - Jingklong - l0c4lh34rtz";
+     echo " Juzo - Isal Dot ID - fcod3x";
      echo "- Bahari Trouble Maker (Team)";
      echo "- IndoXploit (Team)";
      echo "- BerdendangC0de (Team)";
