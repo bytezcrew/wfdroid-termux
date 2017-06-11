@@ -1,4 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/bash
+packages upgrade wget
+hash -r
 
 rm /data/data/com.termux/files/usr/share/wfdroid/master
 wget https://raw.githubusercontent.com/bytezcrew/wfdroid-termux/master/master
@@ -20,4 +22,8 @@ wget https://raw.githubusercontent.com/bytezcrew/wfdroid-termux/master/webbrute
 mv webbrute /data/data/com.termux/files/usr/share/wfdroid/
 chmod 775 /data/data/com.termux/files/usr/share/wfdroid/webbrute
 
+rm /data/data/com.termux/files/usr/share/wfdroid/update
+wget https://raw.githubusercontent.com/bytezcrew/wfdroid-termux/master/update
+mv update /data/data/com.termux/files/usr/share/wfdroid/
+chmod 775 /data/data/com.termux/files/usr/share/wfdroid/update
 /data/data/com.termux/files/usr/share/wfdroid/update tmpdelete
