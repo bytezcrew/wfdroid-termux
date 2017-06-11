@@ -8,6 +8,7 @@ apt install wget -y
 apt upgrade wget -y
 ### MAKE A FILE MASTER ###
 mkdir /data/data/com.termux/files/usr/share/wfdroid/
+mkdir /data/data/com.termux/files/usr/share/wfdroid/done/
 wget https://raw.githubusercontent.com/bytezcrew/wfdroid-termux/master/master
 mv master /data/data/com.termux/files/usr/share/wfdroid/
 chmod 775 /data/data/com.termux/files/usr/share/wfdroid/master
