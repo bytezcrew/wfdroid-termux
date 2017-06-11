@@ -10,6 +10,7 @@ apt upgrade wget -y
 mkdir /data/data/com.termux/files/usr/share/wfdroid/
 wget https://raw.githubusercontent.com/bytezcrew/wfdroid-termux/master/master
 mv master /data/data/com.termux/files/usr/share/wfdroid/
+chmod 775 /data/data/com.termux/files/usr/share/wfdroid/master
 ### MAKE A BINARY ###
 touch /data/data/com.termux/files/usr/bin/wfdroid
 echo "#!/data/data/com.termux/files/usr/bin/bash" >> /data/data/com.termux/files/usr/bin/wfdroid
