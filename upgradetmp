@@ -1,1 +1,19 @@
-# Empty
+#!/data/data/com.termux/files/usr/bin/bash
+
+wget https://raw.githubusercontent.com/bytezcrew/wfdroid-termux/master/master
+mv master /data/data/com.termux/files/usr/share/wfdroid/
+chmod 775 /data/data/com.termux/files/usr/share/wfdroid/master
+
+wget https://raw.githubusercontent.com/bytezcrew/wfdroid-termux/master/loginfinder
+mv loginfinder /data/data/com.termux/files/usr/share/wfdroid/
+chmod 775 /data/data/com.termux/files/usr/share/wfdroid/loginfinder
+
+wget https://raw.githubusercontent.com/bytezcrew/wfdroid-termux/master/sourcecode
+mv sourcecode /data/data/com.termux/files/usr/share/wfdroid/
+chmod 775 /data/data/com.termux/files/usr/share/wfdroid/sourcecode
+
+wget https://raw.githubusercontent.com/bytezcrew/wfdroid-termux/master/webbrute
+mv webbrute /data/data/com.termux/files/usr/share/wfdroid/
+chmod 775 /data/data/com.termux/files/usr/share/wfdroid/webbrute
+
+/data/data/com.termux/files/usr/share/wfdroid/update tmpdelete
